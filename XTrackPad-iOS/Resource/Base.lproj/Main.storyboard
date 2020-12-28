@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DQv-vg-d1s">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Track Pad View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TrackPadViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AOM-1X-2B8">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="4V4-B8-xxo">
+                            <connections>
+                                <segue destination="WSv-F1-cEn" kind="popoverPresentation" popoverAnchorBarButtonItem="4V4-B8-xxo" id="hsg-Nt-txc">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="71.651785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3pb-Vb-gd3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DQv-vg-d1s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hpj-0l-yEG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="63B-FY-kmn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wmV-U6-bvP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="71.651785714285708"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="5rp-64-gWV">
+            <objects>
+                <viewController id="kzh-lM-cFf" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uPR-x4-lmQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="10M-XW-9WF">
+                                <rect key="frame" x="10" y="66" width="394" height="44"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJ4-f4-XEj">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cursor Speed" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecI-vc-aHw">
+                                                <rect key="frame" x="8" y="12" width="104.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="l7y-Iq-ayA">
+                                                <rect key="frame" x="130.5" y="7" width="257.5" height="31"/>
+                                                <connections>
+                                                    <action selector="cursorSpeedChanged:" destination="kzh-lM-cFf" eventType="valueChanged" id="FNd-iq-NO2"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ecI-vc-aHw" firstAttribute="leading" secondItem="bJ4-f4-XEj" secondAttribute="leading" constant="8" id="MqN-5g-1XF"/>
+                                            <constraint firstAttribute="height" constant="44" id="QjO-Ph-HTK"/>
+                                            <constraint firstAttribute="trailing" secondItem="l7y-Iq-ayA" secondAttribute="trailing" constant="8" id="T8c-HN-3ad"/>
+                                            <constraint firstItem="ecI-vc-aHw" firstAttribute="centerY" secondItem="bJ4-f4-XEj" secondAttribute="centerY" id="eJt-h7-fau"/>
+                                            <constraint firstItem="l7y-Iq-ayA" firstAttribute="centerY" secondItem="bJ4-f4-XEj" secondAttribute="centerY" id="gZA-hk-8nS"/>
+                                            <constraint firstItem="l7y-Iq-ayA" firstAttribute="leading" secondItem="ecI-vc-aHw" secondAttribute="trailing" constant="20" id="u9w-kL-zuZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GCq-Kw-C3q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="10M-XW-9WF" firstAttribute="top" secondItem="GCq-Kw-C3q" secondAttribute="top" constant="10" id="2jG-at-qcm"/>
+                            <constraint firstItem="10M-XW-9WF" firstAttribute="leading" secondItem="GCq-Kw-C3q" secondAttribute="leading" constant="10" id="caB-oe-5BK"/>
+                            <constraint firstItem="GCq-Kw-C3q" firstAttribute="trailing" secondItem="10M-XW-9WF" secondAttribute="trailing" constant="10" id="emS-G2-GQZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings" id="icD-yu-Giz"/>
+                    <connections>
+                        <outlet property="cursorSpeedSlider" destination="l7y-Iq-ayA" id="oT5-GQ-aeX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W6E-PX-2dy" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2871.0144927536235" y="71.651785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="guw-6a-kfR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WSv-F1-cEn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="u1C-xD-WlT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kzh-lM-cFf" kind="relationship" relationship="rootViewController" id="mod-9A-y9n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fQ-6c-s9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1960.8695652173915" y="71.651785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

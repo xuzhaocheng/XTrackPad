@@ -12,10 +12,40 @@
 		6B363C85259776E900051EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B363C84259776E900051EEA /* Assets.xcassets */; };
 		6B363C88259776E900051EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B363C86259776E900051EEA /* Main.storyboard */; };
 		6B363C8B259776E900051EEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C8A259776E900051EEA /* main.m */; };
+		6B363CA025977A7300051EEA /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9525977A7300051EEA /* PTUSBHub.m */; };
+		6B363CA125977A7300051EEA /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9625977A7300051EEA /* PTProtocol.m */; };
+		6B363CA225977A7300051EEA /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9825977A7300051EEA /* PTChannel.m */; };
+		6B363CAA25977AA100051EEA /* PeerTalkFrameProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CA825977AA100051EEA /* PeerTalkFrameProcessor.m */; };
+		6B363CAB25977AA100051EEA /* PeerTalkServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CA925977AA100051EEA /* PeerTalkServer.m */; };
+		6B363CB525977ACA00051EEA /* MobileAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CB425977ACA00051EEA /* MobileAppDelegate.m */; };
+		6B363CB825977ACA00051EEA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CB725977ACA00051EEA /* SceneDelegate.m */; };
+		6B363CBB25977ACA00051EEA /* TrackPadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CBA25977ACA00051EEA /* TrackPadViewController.m */; };
+		6B363CBE25977ACA00051EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B363CBC25977ACA00051EEA /* Main.storyboard */; };
+		6B363CC025977ACC00051EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B363CBF25977ACC00051EEA /* Assets.xcassets */; };
+		6B363CC325977ACC00051EEA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B363CC125977ACC00051EEA /* LaunchScreen.storyboard */; };
+		6B363CC625977ACC00051EEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CC525977ACC00051EEA /* main.m */; };
+		6B363CD425977B7300051EEA /* Mouse.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CD225977B7200051EEA /* Mouse.m */; };
+		6B363CDB25977C9500051EEA /* PTUSBHub.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9525977A7300051EEA /* PTUSBHub.m */; };
+		6B363CDE25977C9800051EEA /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9625977A7300051EEA /* PTProtocol.m */; };
+		6B363CE125977C9B00051EEA /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9825977A7300051EEA /* PTChannel.m */; };
+		6B363CF625977F0900051EEA /* MouseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CF125977F0900051EEA /* MouseEvent.m */; };
+		6B363CFD25977F2A00051EEA /* APIClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CFA25977F2A00051EEA /* APIClientManager.m */; };
+		6B363D0225977F6B00051EEA /* TrackPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D0125977F6B00051EEA /* TrackPadView.m */; };
+		6B363D0725977F8900051EEA /* PeerTalkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D0525977F8900051EEA /* PeerTalkClient.m */; };
+		6B363D1E259869D800051EEA /* TrackModeFSM.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D1D259869D800051EEA /* TrackModeFSM.m */; };
+		6B363D2E2598A6B100051EEA /* TrackModeMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D2D2598A6B100051EEA /* TrackModeMove.m */; };
+		6B363D332598A6C800051EEA /* TrackModeScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D322598A6C700051EEA /* TrackModeScroll.m */; };
+		6B363D382598A6D000051EEA /* TrackModeDrag.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D372598A6D000051EEA /* TrackModeDrag.m */; };
+		6B363D442598A96200051EEA /* TrackModeNone.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D432598A96200051EEA /* TrackModeNone.m */; };
+		6B363D4F2598BE3200051EEA /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D4E2598BE3200051EEA /* Settings.m */; };
+		6B363D6B2598D55300051EEA /* NSString+i18n.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D6A2598D55300051EEA /* NSString+i18n.m */; };
+		6B363D732598D61600051EEA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D722598D61600051EEA /* SettingsViewController.m */; };
+		6B363D83259A0AB100051EEA /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B363D82259A0AB100051EEA /* DefaultPreferences.plist */; };
+		6B363D93259A105300051EEA /* TrackPadActionConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D92259A105300051EEA /* TrackPadActionConsumer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		6B363C7B259776E800051EEA /* XTrackPad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XTrackPad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B363C7B259776E800051EEA /* XTrackPad-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XTrackPad-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B363C7E259776E800051EEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B363C7F259776E800051EEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6B363C81259776E800051EEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -25,10 +55,76 @@
 		6B363C89259776E900051EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B363C8A259776E900051EEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6B363C8C259776E900051EEA /* XTrackPad.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XTrackPad.entitlements; sourceTree = "<group>"; };
+		6B363C9525977A7300051EEA /* PTUSBHub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTUSBHub.m; sourceTree = "<group>"; };
+		6B363C9625977A7300051EEA /* PTProtocol.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTProtocol.m; sourceTree = "<group>"; };
+		6B363C9725977A7300051EEA /* Peertalk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Peertalk.h; sourceTree = "<group>"; };
+		6B363C9825977A7300051EEA /* PTChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTChannel.m; sourceTree = "<group>"; };
+		6B363C9925977A7300051EEA /* PTDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTDefines.h; sourceTree = "<group>"; };
+		6B363C9B25977A7300051EEA /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		6B363C9C25977A7300051EEA /* PTPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTPrivate.h; sourceTree = "<group>"; };
+		6B363C9D25977A7300051EEA /* PTProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTProtocol.h; sourceTree = "<group>"; };
+		6B363C9E25977A7300051EEA /* PTUSBHub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTUSBHub.h; sourceTree = "<group>"; };
+		6B363C9F25977A7300051EEA /* PTChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTChannel.h; sourceTree = "<group>"; };
+		6B363CA625977AA100051EEA /* PeerTalkServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerTalkServer.h; sourceTree = "<group>"; };
+		6B363CA725977AA100051EEA /* PeerTalkFrameProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerTalkFrameProcessor.h; sourceTree = "<group>"; };
+		6B363CA825977AA100051EEA /* PeerTalkFrameProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerTalkFrameProcessor.m; sourceTree = "<group>"; };
+		6B363CA925977AA100051EEA /* PeerTalkServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerTalkServer.m; sourceTree = "<group>"; };
+		6B363CB125977ACA00051EEA /* XTrackPad-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XTrackPad-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B363CB325977ACA00051EEA /* MobileAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MobileAppDelegate.h; sourceTree = "<group>"; };
+		6B363CB425977ACA00051EEA /* MobileAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MobileAppDelegate.m; sourceTree = "<group>"; };
+		6B363CB625977ACA00051EEA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		6B363CB725977ACA00051EEA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		6B363CB925977ACA00051EEA /* TrackPadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackPadViewController.h; sourceTree = "<group>"; };
+		6B363CBA25977ACA00051EEA /* TrackPadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackPadViewController.m; sourceTree = "<group>"; };
+		6B363CBD25977ACA00051EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B363CBF25977ACC00051EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B363CC225977ACC00051EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B363CC425977ACC00051EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B363CC525977ACC00051EEA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B363CD225977B7200051EEA /* Mouse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mouse.m; sourceTree = "<group>"; };
+		6B363CD325977B7300051EEA /* Mouse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mouse.h; sourceTree = "<group>"; };
+		6B363CF125977F0900051EEA /* MouseEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseEvent.m; sourceTree = "<group>"; };
+		6B363CF425977F0900051EEA /* MouseEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
+		6B363CF525977F0900051EEA /* EventTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTypes.h; sourceTree = "<group>"; };
+		6B363CFA25977F2A00051EEA /* APIClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClientManager.m; sourceTree = "<group>"; };
+		6B363CFB25977F2A00051EEA /* APIClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClientManager.h; sourceTree = "<group>"; };
+		6B363CFC25977F2A00051EEA /* APIClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClientProtocol.h; sourceTree = "<group>"; };
+		6B363D0025977F6B00051EEA /* TrackPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPadView.h; sourceTree = "<group>"; };
+		6B363D0125977F6B00051EEA /* TrackPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackPadView.m; sourceTree = "<group>"; };
+		6B363D0525977F8900051EEA /* PeerTalkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerTalkClient.m; sourceTree = "<group>"; };
+		6B363D0625977F8900051EEA /* PeerTalkClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeerTalkClient.h; sourceTree = "<group>"; };
+		6B363D1C259869D800051EEA /* TrackModeFSM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackModeFSM.h; sourceTree = "<group>"; };
+		6B363D1D259869D800051EEA /* TrackModeFSM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackModeFSM.m; sourceTree = "<group>"; };
+		6B363D2C2598A6B100051EEA /* TrackModeMove.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackModeMove.h; sourceTree = "<group>"; };
+		6B363D2D2598A6B100051EEA /* TrackModeMove.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackModeMove.m; sourceTree = "<group>"; };
+		6B363D312598A6C700051EEA /* TrackModeScroll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackModeScroll.h; sourceTree = "<group>"; };
+		6B363D322598A6C700051EEA /* TrackModeScroll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackModeScroll.m; sourceTree = "<group>"; };
+		6B363D362598A6D000051EEA /* TrackModeDrag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackModeDrag.h; sourceTree = "<group>"; };
+		6B363D372598A6D000051EEA /* TrackModeDrag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackModeDrag.m; sourceTree = "<group>"; };
+		6B363D3B2598A7D000051EEA /* TrackMode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackMode.h; sourceTree = "<group>"; };
+		6B363D422598A96200051EEA /* TrackModeNone.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackModeNone.h; sourceTree = "<group>"; };
+		6B363D432598A96200051EEA /* TrackModeNone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackModeNone.m; sourceTree = "<group>"; };
+		6B363D4D2598BE3200051EEA /* Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		6B363D4E2598BE3200051EEA /* Settings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		6B363D692598D55300051EEA /* NSString+i18n.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+i18n.h"; sourceTree = "<group>"; };
+		6B363D6A2598D55300051EEA /* NSString+i18n.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+i18n.m"; sourceTree = "<group>"; };
+		6B363D712598D61600051EEA /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		6B363D722598D61600051EEA /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		6B363D82259A0AB100051EEA /* DefaultPreferences.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = DefaultPreferences.plist; sourceTree = "<group>"; };
+		6B363D88259A0F4A00051EEA /* TrackPadActionConsumerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackPadActionConsumerProtocol.h; sourceTree = "<group>"; };
+		6B363D91259A105300051EEA /* TrackPadActionConsumer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackPadActionConsumer.h; sourceTree = "<group>"; };
+		6B363D92259A105300051EEA /* TrackPadActionConsumer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackPadActionConsumer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		6B363C78259776E800051EEA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B363CAE25977ACA00051EEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +137,9 @@
 		6B363C72259776E800051EEA = {
 			isa = PBXGroup;
 			children = (
-				6B363C7D259776E800051EEA /* XTrackPad */,
+				6B363C9425977A7300051EEA /* PeerTalk */,
+				6B363C7D259776E800051EEA /* XTrackPad-macOS */,
+				6B363CB225977ACA00051EEA /* XTrackPad-iOS */,
 				6B363C7C259776E800051EEA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,33 +147,194 @@
 		6B363C7C259776E800051EEA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6B363C7B259776E800051EEA /* XTrackPad.app */,
+				6B363C7B259776E800051EEA /* XTrackPad-macOS.app */,
+				6B363CB125977ACA00051EEA /* XTrackPad-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6B363C7D259776E800051EEA /* XTrackPad */ = {
+		6B363C7D259776E800051EEA /* XTrackPad-macOS */ = {
 			isa = PBXGroup;
 			children = (
+				6B363CA425977AA100051EEA /* Server */,
 				6B363C7E259776E800051EEA /* AppDelegate.h */,
 				6B363C7F259776E800051EEA /* AppDelegate.m */,
 				6B363C81259776E800051EEA /* ViewController.h */,
 				6B363C82259776E800051EEA /* ViewController.m */,
+				6B363CD325977B7300051EEA /* Mouse.h */,
+				6B363CD225977B7200051EEA /* Mouse.m */,
 				6B363C84259776E900051EEA /* Assets.xcassets */,
 				6B363C86259776E900051EEA /* Main.storyboard */,
 				6B363C89259776E900051EEA /* Info.plist */,
 				6B363C8A259776E900051EEA /* main.m */,
 				6B363C8C259776E900051EEA /* XTrackPad.entitlements */,
 			);
-			path = XTrackPad;
+			path = "XTrackPad-macOS";
+			sourceTree = "<group>";
+		};
+		6B363C9425977A7300051EEA /* PeerTalk */ = {
+			isa = PBXGroup;
+			children = (
+				6B363C9A25977A7300051EEA /* Common */,
+				6B363C9525977A7300051EEA /* PTUSBHub.m */,
+				6B363C9725977A7300051EEA /* Peertalk.h */,
+				6B363C9625977A7300051EEA /* PTProtocol.m */,
+				6B363C9825977A7300051EEA /* PTChannel.m */,
+				6B363C9925977A7300051EEA /* PTDefines.h */,
+				6B363C9C25977A7300051EEA /* PTPrivate.h */,
+				6B363C9D25977A7300051EEA /* PTProtocol.h */,
+				6B363C9E25977A7300051EEA /* PTUSBHub.h */,
+				6B363C9F25977A7300051EEA /* PTChannel.h */,
+			);
+			path = PeerTalk;
+			sourceTree = "<group>";
+		};
+		6B363C9A25977A7300051EEA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				6B363C9B25977A7300051EEA /* Defines.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		6B363CA425977AA100051EEA /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				6B363CA625977AA100051EEA /* PeerTalkServer.h */,
+				6B363CA925977AA100051EEA /* PeerTalkServer.m */,
+				6B363CA725977AA100051EEA /* PeerTalkFrameProcessor.h */,
+				6B363CA825977AA100051EEA /* PeerTalkFrameProcessor.m */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		6B363CB225977ACA00051EEA /* XTrackPad-iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6B363D81259A0A8700051EEA /* Resource */,
+				6B363D76259A05F300051EEA /* Settings */,
+				6B363D6E2598D57E00051EEA /* Extensions */,
+				6B363D592598D2A500051EEA /* TrackPad */,
+				6B363D562598D28400051EEA /* AppDelegate */,
+				6B363D0C25977FE500051EEA /* Client */,
+				6B363CC525977ACC00051EEA /* main.m */,
+				6B363CC425977ACC00051EEA /* Info.plist */,
+			);
+			path = "XTrackPad-iOS";
+			sourceTree = "<group>";
+		};
+		6B363CF025977F0900051EEA /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				6B363CF525977F0900051EEA /* EventTypes.h */,
+				6B363CF425977F0900051EEA /* MouseEvent.h */,
+				6B363CF125977F0900051EEA /* MouseEvent.m */,
+			);
+			path = Events;
+			sourceTree = "<group>";
+		};
+		6B363D0C25977FE500051EEA /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				6B363CFB25977F2A00051EEA /* APIClientManager.h */,
+				6B363CFA25977F2A00051EEA /* APIClientManager.m */,
+				6B363CFC25977F2A00051EEA /* APIClientProtocol.h */,
+				6B363D0625977F8900051EEA /* PeerTalkClient.h */,
+				6B363D0525977F8900051EEA /* PeerTalkClient.m */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		6B363D142597810600051EEA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B363D0025977F6B00051EEA /* TrackPadView.h */,
+				6B363D0125977F6B00051EEA /* TrackPadView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6B363D1B259869C500051EEA /* TrackMode */ = {
+			isa = PBXGroup;
+			children = (
+				6B363D1C259869D800051EEA /* TrackModeFSM.h */,
+				6B363D1D259869D800051EEA /* TrackModeFSM.m */,
+				6B363D3B2598A7D000051EEA /* TrackMode.h */,
+				6B363D422598A96200051EEA /* TrackModeNone.h */,
+				6B363D432598A96200051EEA /* TrackModeNone.m */,
+				6B363D2C2598A6B100051EEA /* TrackModeMove.h */,
+				6B363D2D2598A6B100051EEA /* TrackModeMove.m */,
+				6B363D312598A6C700051EEA /* TrackModeScroll.h */,
+				6B363D322598A6C700051EEA /* TrackModeScroll.m */,
+				6B363D362598A6D000051EEA /* TrackModeDrag.h */,
+				6B363D372598A6D000051EEA /* TrackModeDrag.m */,
+			);
+			path = TrackMode;
+			sourceTree = "<group>";
+		};
+		6B363D562598D28400051EEA /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6B363CB325977ACA00051EEA /* MobileAppDelegate.h */,
+				6B363CB425977ACA00051EEA /* MobileAppDelegate.m */,
+				6B363CB625977ACA00051EEA /* SceneDelegate.h */,
+				6B363CB725977ACA00051EEA /* SceneDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6B363D592598D2A500051EEA /* TrackPad */ = {
+			isa = PBXGroup;
+			children = (
+				6B363CF025977F0900051EEA /* Events */,
+				6B363D142597810600051EEA /* Views */,
+				6B363D1B259869C500051EEA /* TrackMode */,
+				6B363D88259A0F4A00051EEA /* TrackPadActionConsumerProtocol.h */,
+				6B363D91259A105300051EEA /* TrackPadActionConsumer.h */,
+				6B363D92259A105300051EEA /* TrackPadActionConsumer.m */,
+				6B363CB925977ACA00051EEA /* TrackPadViewController.h */,
+				6B363CBA25977ACA00051EEA /* TrackPadViewController.m */,
+			);
+			path = TrackPad;
+			sourceTree = "<group>";
+		};
+		6B363D6E2598D57E00051EEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6B363D692598D55300051EEA /* NSString+i18n.h */,
+				6B363D6A2598D55300051EEA /* NSString+i18n.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6B363D76259A05F300051EEA /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6B363D4D2598BE3200051EEA /* Settings.h */,
+				6B363D4E2598BE3200051EEA /* Settings.m */,
+				6B363D712598D61600051EEA /* SettingsViewController.h */,
+				6B363D722598D61600051EEA /* SettingsViewController.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		6B363D81259A0A8700051EEA /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6B363CBC25977ACA00051EEA /* Main.storyboard */,
+				6B363CBF25977ACC00051EEA /* Assets.xcassets */,
+				6B363CC125977ACC00051EEA /* LaunchScreen.storyboard */,
+				6B363D82259A0AB100051EEA /* DefaultPreferences.plist */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6B363C7A259776E800051EEA /* XTrackPad */ = {
+		6B363C7A259776E800051EEA /* XTrackPad-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6B363C8F259776E900051EEA /* Build configuration list for PBXNativeTarget "XTrackPad" */;
+			buildConfigurationList = 6B363C8F259776E900051EEA /* Build configuration list for PBXNativeTarget "XTrackPad-macOS" */;
 			buildPhases = (
 				6B363C77259776E800051EEA /* Sources */,
 				6B363C78259776E800051EEA /* Frameworks */,
@@ -85,9 +344,26 @@
 			);
 			dependencies = (
 			);
-			name = XTrackPad;
+			name = "XTrackPad-macOS";
 			productName = XTrackPad;
-			productReference = 6B363C7B259776E800051EEA /* XTrackPad.app */;
+			productReference = 6B363C7B259776E800051EEA /* XTrackPad-macOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B363CB025977ACA00051EEA /* XTrackPad-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B363CC725977ACC00051EEA /* Build configuration list for PBXNativeTarget "XTrackPad-iOS" */;
+			buildPhases = (
+				6B363CAD25977ACA00051EEA /* Sources */,
+				6B363CAE25977ACA00051EEA /* Frameworks */,
+				6B363CAF25977ACA00051EEA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "XTrackPad-iOS";
+			productName = XTrackPad;
+			productReference = 6B363CB125977ACA00051EEA /* XTrackPad-iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -99,6 +375,9 @@
 				LastUpgradeCheck = 1220;
 				TargetAttributes = {
 					6B363C7A259776E800051EEA = {
+						CreatedOnToolsVersion = 12.2;
+					};
+					6B363CB025977ACA00051EEA = {
 						CreatedOnToolsVersion = 12.2;
 					};
 				};
@@ -116,7 +395,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6B363C7A259776E800051EEA /* XTrackPad */,
+				6B363C7A259776E800051EEA /* XTrackPad-macOS */,
+				6B363CB025977ACA00051EEA /* XTrackPad-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +411,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6B363CAF25977ACA00051EEA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B363CC325977ACC00051EEA /* LaunchScreen.storyboard in Resources */,
+				6B363D83259A0AB100051EEA /* DefaultPreferences.plist in Resources */,
+				6B363CC025977ACC00051EEA /* Assets.xcassets in Resources */,
+				6B363CBE25977ACA00051EEA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -138,9 +429,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B363CD425977B7300051EEA /* Mouse.m in Sources */,
 				6B363C83259776E800051EEA /* ViewController.m in Sources */,
+				6B363CA225977A7300051EEA /* PTChannel.m in Sources */,
+				6B363CAB25977AA100051EEA /* PeerTalkServer.m in Sources */,
 				6B363C8B259776E900051EEA /* main.m in Sources */,
+				6B363CAA25977AA100051EEA /* PeerTalkFrameProcessor.m in Sources */,
+				6B363CA025977A7300051EEA /* PTUSBHub.m in Sources */,
 				6B363C80259776E800051EEA /* AppDelegate.m in Sources */,
+				6B363CA125977A7300051EEA /* PTProtocol.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B363CAD25977ACA00051EEA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B363CBB25977ACA00051EEA /* TrackPadViewController.m in Sources */,
+				6B363D93259A105300051EEA /* TrackPadActionConsumer.m in Sources */,
+				6B363D1E259869D800051EEA /* TrackModeFSM.m in Sources */,
+				6B363CB525977ACA00051EEA /* MobileAppDelegate.m in Sources */,
+				6B363D4F2598BE3200051EEA /* Settings.m in Sources */,
+				6B363D0725977F8900051EEA /* PeerTalkClient.m in Sources */,
+				6B363CF625977F0900051EEA /* MouseEvent.m in Sources */,
+				6B363D332598A6C800051EEA /* TrackModeScroll.m in Sources */,
+				6B363D382598A6D000051EEA /* TrackModeDrag.m in Sources */,
+				6B363D442598A96200051EEA /* TrackModeNone.m in Sources */,
+				6B363CE125977C9B00051EEA /* PTChannel.m in Sources */,
+				6B363CC625977ACC00051EEA /* main.m in Sources */,
+				6B363D732598D61600051EEA /* SettingsViewController.m in Sources */,
+				6B363CDB25977C9500051EEA /* PTUSBHub.m in Sources */,
+				6B363D2E2598A6B100051EEA /* TrackModeMove.m in Sources */,
+				6B363D6B2598D55300051EEA /* NSString+i18n.m in Sources */,
+				6B363CB825977ACA00051EEA /* SceneDelegate.m in Sources */,
+				6B363CDE25977C9800051EEA /* PTProtocol.m in Sources */,
+				6B363CFD25977F2A00051EEA /* APIClientManager.m in Sources */,
+				6B363D0225977F6B00051EEA /* TrackPadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +477,22 @@
 				6B363C87259776E900051EEA /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B363CBC25977ACA00051EEA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B363CBD25977ACA00051EEA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B363CC125977ACC00051EEA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B363CC225977ACC00051EEA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -209,11 +549,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/PeerTalk\"",
+					"\"$(SRCROOT)/PeerTalk/Common\"",
+				);
 			};
 			name = Debug;
 		};
@@ -262,10 +607,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = (
+					"\"$(SRCROOT)/PeerTalk\"",
+					"\"$(SRCROOT)/PeerTalk/Common\"",
+				);
 			};
 			name = Release;
 		};
@@ -274,12 +624,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = XTrackPad/XTrackPad.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "XTrackPad-macOS/XTrackPad.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4QYLP75J57;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = XTrackPad/Info.plist;
+				INFOPLIST_FILE = "XTrackPad-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -294,18 +644,59 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = XTrackPad/XTrackPad.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "XTrackPad-macOS/XTrackPad.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 4QYLP75J57;
 				ENABLE_HARDENED_RUNTIME = YES;
-				INFOPLIST_FILE = XTrackPad/Info.plist;
+				INFOPLIST_FILE = "XTrackPad-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.beaver.XTrackPad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6B363CC825977ACC00051EEA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QYLP75J57;
+				INFOPLIST_FILE = "XTrackPad-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.beaver.XTrackPad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B363CC925977ACC00051EEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QYLP75J57;
+				INFOPLIST_FILE = "XTrackPad-iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.beaver.XTrackPad;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
@@ -321,11 +712,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6B363C8F259776E900051EEA /* Build configuration list for PBXNativeTarget "XTrackPad" */ = {
+		6B363C8F259776E900051EEA /* Build configuration list for PBXNativeTarget "XTrackPad-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6B363C90259776E900051EEA /* Debug */,
 				6B363C91259776E900051EEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B363CC725977ACC00051EEA /* Build configuration list for PBXNativeTarget "XTrackPad-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B363CC825977ACC00051EEA /* Debug */,
+				6B363CC925977ACC00051EEA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
