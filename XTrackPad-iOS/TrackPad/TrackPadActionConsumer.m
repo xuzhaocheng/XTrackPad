@@ -8,7 +8,7 @@
 #import "TrackPadActionConsumer.h"
 #import "MouseEvent.h"
 #import "Settings.h"
-#import "APIClientManager.h"
+#import "ConnectionManager.h"
 
 @interface TrackPadActionConsumer()
 
@@ -33,30 +33,30 @@
 
 - (void)handleDoubleClickEvent { 
     self.mouseEvent.type = MouseEventTypeDoubleClick;
-    [[APIClientManager activeClient] sendEvent:self.mouseEvent];
+    [ConnectionManager sendEvent:self.mouseEvent];
 }
 
 - (void)handleMoveEventWithDelta:(CGPoint)delta {
     self.mouseEvent.delta = CGPointMake(delta.x * [self cursorSpeed], delta.y * [self cursorSpeed]);
     self.mouseEvent.type = MouseEventTypeMove;
-    [[APIClientManager activeClient] sendEvent:self.mouseEvent];
+    [ConnectionManager sendEvent:self.mouseEvent];
 }
 
 - (void)handleRightClickEvent { 
     self.mouseEvent.type = MouseEventTypeRightClick;
-    [[APIClientManager activeClient] sendEvent:self.mouseEvent];
+    [ConnectionManager sendEvent:self.mouseEvent];
 }
 
 - (void)handleScrollEventWithDelta:(CGPoint)delta { 
     self.mouseEvent.type = MouseEventTypeScroll;
     self.mouseEvent.delta = CGPointMake(delta.x * [self cursorSpeed], delta.y * [self cursorSpeed]);
-    [[APIClientManager activeClient] sendEvent:self.mouseEvent];
+    [ConnectionManager sendEvent:self.mouseEvent];
 }
 
 - (void)handleSingleClickEvent {
     NSLog(@"Tap !");
     self.mouseEvent.type = MouseEventTypeSingleClick;
-    [[APIClientManager activeClient] sendEvent:self.mouseEvent];
+    [ConnectionManager sendEvent:self.mouseEvent];
 }
 
 @end

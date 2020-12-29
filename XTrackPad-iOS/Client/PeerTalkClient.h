@@ -7,17 +7,17 @@
 
 #import <Foundation/Foundation.h>
 #import "EventTypes.h"
-#import "APIClientProtocol.h"
+#import "ClientProtocol.h"
 
 @class MouseEvent;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PeerTalkClient : NSObject <APIClientProtocol>
+@interface PeerTalkClient : NSObject <ClientProtocol>
+
+@property (nonatomic, weak) id <ConnectionStateListener> delegate;
 
 + (instancetype)sharedInstance;
-- (void)startup;
-- (void)sendEvent:(MouseEvent *)event;
 
 @end
 

@@ -21,3 +21,9 @@ typedef struct _PTEventFrame {
     float x;
     float y;
 } PTEventFrame;
+
+enum PTFrameType {
+    PTFrameTypeEvent = 1001,
+};
+
+static const int PTProtocolIPv4Port = 2345;

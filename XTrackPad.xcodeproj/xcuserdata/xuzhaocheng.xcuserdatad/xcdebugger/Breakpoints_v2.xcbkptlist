@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "326729ED-1D50-4598-8D9E-54D455EDB8AE"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "XTrackPad-iOS/TrackPad/Views/TrackPadView.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "-handleSingleTap:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "E3DD3625-ED54-4E8E-A8AE-EAC858FC5B06"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -39,16 +23,32 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9AE41471-FA84-4CFD-B293-A1EFA45F26CE"
+            uuid = "D8BE75FC-962A-4C1D-8FD5-10081361FC15"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "XTrackPad-iOS/TrackPad/Views/TrackPadView.m"
+            filePath = "XTrackPad-iOS/Client/PeerTalkClient.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "-setupGestures"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "-ioFrameChannel:shouldAcceptFrameOfType:tag:payloadSize:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "996C1A2F-68A3-4517-9675-0F200A2CA52F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "XTrackPad-iOS/Client/PeerTalkClient.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "-ioFrameChannel:didEndWithError:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

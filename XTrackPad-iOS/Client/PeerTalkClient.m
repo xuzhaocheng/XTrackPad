@@ -10,12 +10,6 @@
 #import "MouseEvent.h"
 #import "Defines.h"
 
-static const int PTProtocolIPv4Port = 2345;
-
-enum PTFrameType {
-    PTFrameTypeEvent = 1001,
-};
-
 @interface PeerTalkClient() <PTChannelDelegate>
 
 @property (nonatomic, weak) PTChannel *serverChannel;
@@ -45,6 +39,13 @@ enum PTFrameType {
     }];
 }
 
+- (ConnectionState)connectionState {
+    if (self.peerChannel) {
+        return ConnectionStateConnected;
+    }
+    return ConnectionStateNotConnected;
+}
+
 - (void)sendEvent:(MouseEvent *)event {
     if (self.peerChannel) {
         dispatch_data_t payload = [event payload];
@@ -68,6 +69,8 @@ enum PTFrameType {
     } else if (type != PTFrameTypeEvent) {
         NSLog(@"Unexpected frame of type %u", type);
         [channel close];
+        self.peerChannel = nil;
+        [self.delegate connectionStatusDidChange];
         return NO;
     } else {
         return YES;
@@ -85,6 +88,8 @@ enum PTFrameType {
     if (error) {
         NSLog(@"%@ ended with error: %@", channel, error);
     } else {
+        self.peerChannel = nil;
+        [self.delegate connectionStatusDidChange];
         NSLog(@"Disconnected from %@", channel.userInfo);
     }
 }
@@ -103,7 +108,7 @@ enum PTFrameType {
     self.peerChannel = otherChannel;
     self.peerChannel.userInfo = address;
     NSLog(@"Connected to %@", address);
-
+    [self.delegate connectionStatusDidChange];
     // Send some information about ourselves to the other end
 
 }

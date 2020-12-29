@@ -6,7 +6,7 @@
 //
 
 #import "TrackModeDrag.h"
-#import "APIClientManager.h"
+#import "ConnectionManager.h"
 #import "MouseEvent.h"
 
 @implementation TrackModeDrag
@@ -16,17 +16,21 @@
 }
 
 - (void)enter {
+#if DEBUG_TRACK_MODE
     NSLog(@"Enter drag track mode");
+#endif
     MouseEvent *event = [[MouseEvent alloc] init];
     event.type = MouseEventTypeBeginDrag;
-    [[APIClientManager activeClient] sendEvent:event];
+    [ConnectionManager sendEvent:event];
 }
 
 - (void)leave {
+#if DEBUG_TRACK_MODE
     NSLog(@"Leave drag track mode");
+#endif
     MouseEvent *event = [[MouseEvent alloc] init];
     event.type = MouseEventTypeEndDrag;
-    [[APIClientManager activeClient] sendEvent:event];
+    [ConnectionManager sendEvent:event];
 }
 
 - (BOOL)couldTransformTo:(id<TrackMode>)mode {
