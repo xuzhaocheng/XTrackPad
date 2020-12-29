@@ -7,6 +7,7 @@
 
 #import "ConnectionManager.h"
 #import "PeerTalkClient.h"
+#import <UIKit/UIKit.h>
 
 NSNotificationName const XTPConnectionStatusDidChange = @"XTPConnectionStatusDidChange";
 
@@ -30,8 +31,16 @@ NSNotificationName const XTPConnectionStatusDidChange = @"XTPConnectionStatusDid
     self = [super init];
     if (self) {
         [PeerTalkClient sharedInstance].delegate = self;
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(appWillResume:)
+                                                     name:UIApplicationWillEnterForegroundNotification
+                                                   object:nil];
     }
     return self;
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 + (id<ClientProtocol>)activeClient {
@@ -42,11 +51,17 @@ NSNotificationName const XTPConnectionStatusDidChange = @"XTPConnectionStatusDid
     [[NSNotificationCenter defaultCenter] postNotificationName:XTPConnectionStatusDidChange object:nil];
 }
 
+- (void)appWillResume:(NSNotification *)notification {
+    if ([ConnectionManager connectionState] != ConnectionStateConnected) {
+        [[ConnectionManager activeClient] connect];
+    }
+}
+
 #pragma mark - Public Methods
 
 + (void)startup {
     [self sharedInstance];
-    [[self activeClient] startup];
+    [[self activeClient] connect];
 }
 
 + (ConnectionState)connectionState {

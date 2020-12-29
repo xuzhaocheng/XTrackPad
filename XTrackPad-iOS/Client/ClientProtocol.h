@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol ClientProtocol <NSObject>
 
-- (void)startup;
+- (void)connect;
 - (ConnectionState)connectionState;
 - (void)sendEvent:(MouseEvent *)event;
 
