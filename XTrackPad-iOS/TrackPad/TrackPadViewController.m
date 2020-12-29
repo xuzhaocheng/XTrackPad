@@ -9,23 +9,66 @@
 #import "TrackPadView.h"
 #import "NSString+i18n.h"
 #import "TrackPadActionConsumer.h"
+#import "ConnectionManager.h"
 
 @interface TrackPadViewController ()
 
+@property (nonatomic, strong) TrackPadView *trackPadView;
 @property (nonatomic, strong) TrackPadActionConsumer *actionConsumer;
+
 @end
 
 @implementation TrackPadViewController
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 
-    TrackPadView *view = [[TrackPadView alloc] initWithFrame:self.view.bounds];
-    view.delegate = self.actionConsumer;
-    [self.view addSubview:view];
-    
-    self.title = @"XTrackPad";
+    [self.view addSubview:self.trackPadView];
+    [self addNotificationObserver];
+    [self updateConnectionState];
+}
+
+- (void)addNotificationObserver {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(connectionStateDidChange) name:XTPConnectionStatusDidChange object:nil];
+}
+
+- (void)updateConnectionState {
+    ConnectionState state = [ConnectionManager connectionState];
+    switch (state) {
+        case ConnectionStateConnected:
+            self.title = @"Connected";
+            break;
+        case ConnectionStateConnecting:
+            self.title = @"Connecting";
+            break;
+        case ConnectionStateNotConnected:
+            self.title = @"No Connection";
+            break;
+        default:
+            self.title = @"Unkown";
+            break;
+    }
+}
+
+#pragma mark - Notification
+
+- (void)connectionStateDidChange {
+    [self updateConnectionState];
+}
+
+#pragma mark - Properties
+
+- (TrackPadView *)trackPadView {
+    if (!_trackPadView) {
+        TrackPadView *view = [[TrackPadView alloc] initWithFrame:self.view.bounds];
+        view.delegate = self.actionConsumer;
+        _trackPadView = view;
+    }
+    return _trackPadView;
 }
 
 - (TrackPadActionConsumer *)actionConsumer {

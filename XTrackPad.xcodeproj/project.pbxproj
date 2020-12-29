@@ -29,7 +29,7 @@
 		6B363CDE25977C9800051EEA /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9625977A7300051EEA /* PTProtocol.m */; };
 		6B363CE125977C9B00051EEA /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9825977A7300051EEA /* PTChannel.m */; };
 		6B363CF625977F0900051EEA /* MouseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CF125977F0900051EEA /* MouseEvent.m */; };
-		6B363CFD25977F2A00051EEA /* APIClientManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CFA25977F2A00051EEA /* APIClientManager.m */; };
+		6B363CFD25977F2A00051EEA /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CFA25977F2A00051EEA /* ConnectionManager.m */; };
 		6B363D0225977F6B00051EEA /* TrackPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D0125977F6B00051EEA /* TrackPadView.m */; };
 		6B363D0725977F8900051EEA /* PeerTalkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D0525977F8900051EEA /* PeerTalkClient.m */; };
 		6B363D1E259869D800051EEA /* TrackModeFSM.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D1D259869D800051EEA /* TrackModeFSM.m */; };
@@ -86,9 +86,9 @@
 		6B363CF125977F0900051EEA /* MouseEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseEvent.m; sourceTree = "<group>"; };
 		6B363CF425977F0900051EEA /* MouseEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
 		6B363CF525977F0900051EEA /* EventTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTypes.h; sourceTree = "<group>"; };
-		6B363CFA25977F2A00051EEA /* APIClientManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIClientManager.m; sourceTree = "<group>"; };
-		6B363CFB25977F2A00051EEA /* APIClientManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClientManager.h; sourceTree = "<group>"; };
-		6B363CFC25977F2A00051EEA /* APIClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIClientProtocol.h; sourceTree = "<group>"; };
+		6B363CFA25977F2A00051EEA /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
+		6B363CFB25977F2A00051EEA /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
+		6B363CFC25977F2A00051EEA /* ClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientProtocol.h; sourceTree = "<group>"; };
 		6B363D0025977F6B00051EEA /* TrackPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPadView.h; sourceTree = "<group>"; };
 		6B363D0125977F6B00051EEA /* TrackPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackPadView.m; sourceTree = "<group>"; };
 		6B363D0525977F8900051EEA /* PeerTalkClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeerTalkClient.m; sourceTree = "<group>"; };
@@ -236,9 +236,9 @@
 		6B363D0C25977FE500051EEA /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				6B363CFB25977F2A00051EEA /* APIClientManager.h */,
-				6B363CFA25977F2A00051EEA /* APIClientManager.m */,
-				6B363CFC25977F2A00051EEA /* APIClientProtocol.h */,
+				6B363CFB25977F2A00051EEA /* ConnectionManager.h */,
+				6B363CFA25977F2A00051EEA /* ConnectionManager.m */,
+				6B363CFC25977F2A00051EEA /* ClientProtocol.h */,
 				6B363D0625977F8900051EEA /* PeerTalkClient.h */,
 				6B363D0525977F8900051EEA /* PeerTalkClient.m */,
 			);
@@ -463,7 +463,7 @@
 				6B363D6B2598D55300051EEA /* NSString+i18n.m in Sources */,
 				6B363CB825977ACA00051EEA /* SceneDelegate.m in Sources */,
 				6B363CDE25977C9800051EEA /* PTProtocol.m in Sources */,
-				6B363CFD25977F2A00051EEA /* APIClientManager.m in Sources */,
+				6B363CFD25977F2A00051EEA /* ConnectionManager.m in Sources */,
 				6B363D0225977F6B00051EEA /* TrackPadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -666,6 +666,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QYLP75J57;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"DEBUG_TRACK_MODE=1",
+					"$(inherited)",
+				);
 				INFOPLIST_FILE = "XTrackPad-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -6,7 +6,7 @@
 //
 
 #import "TrackPadView.h"
-#import "APIClientManager.h"
+#import "ConnectionManager.h"
 #import "MouseEvent.h"
 #import "TrackModeFSM.h"
 

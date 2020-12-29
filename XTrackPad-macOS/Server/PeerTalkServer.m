@@ -10,10 +10,6 @@
 #import "Defines.h"
 #import "PeerTalkFrameProcessor.h"
 
-enum PTFrameType {
-    PTFrameTypeEvent = 1001,
-};
-
 @interface PeerTalkServer() <PTChannelDelegate>
 
 @property (nonatomic, assign) NSNumber *connectingToDeviceID;
@@ -27,7 +23,6 @@ enum PTFrameType {
 @property(nonatomic, strong) PTChannel *connectedChannel;
 @end
 
-static const int PTProtocolIPv4Port = 2345;
 static const NSTimeInterval PTAppReconnectDelay = 3.0;
 
 
