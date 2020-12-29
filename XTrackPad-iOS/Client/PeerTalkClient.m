@@ -28,13 +28,22 @@
     return _instance;
 }
 
-- (void)startup {
+- (void)connect {
+    if (self.serverChannel) {
+        if (self.serverChannel.isListening || self.serverChannel.isConnected) {
+            return;
+        }
+        [self.serverChannel cancel];
+        self.serverChannel = nil;
+    }
+    
     PTChannel *channel = [PTChannel channelWithDelegate:self];
     [channel listenOnPort:PTProtocolIPv4Port IPv4Address:INADDR_LOOPBACK callback:^(NSError *error) {
         if (error) {
-            NSLog(@"");
+            NSLog(@"server error: %@", error);
         } else {
             self.serverChannel = channel;
+            NSLog(@"server channel: %@", self.serverChannel);
         }
     }];
 }
