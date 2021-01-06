@@ -9,11 +9,14 @@
 #import "ClientConnectionManager.h"
 #import "MouseEvent.h"
 #import "TrackModeFSM.h"
+#import "UITapGestureRecognizer+Cancel.h"
 
 @interface TrackPadView()
 
 @property (nonatomic, strong) TrackModeFSM *fsm;
-@property (nonatomic, assign, getter=isMoved) BOOL moved;
+@property (nonatomic, strong) UITapGestureRecognizer *doubleTap;
+@property (nonatomic, strong) UITapGestureRecognizer *singleTap;
+@property (nonatomic, strong) UITapGestureRecognizer *rightTap;
 
 @end
 
@@ -35,17 +38,20 @@
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTap:)];
     singleTap.numberOfTouchesRequired = 1;
     singleTap.numberOfTapsRequired = 1;
+    self.singleTap = singleTap;
     [self addGestureRecognizer:singleTap];
 
     UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleDoubleTap:)];
     doubleTap.numberOfTapsRequired = 2;
     doubleTap.numberOfTouchesRequired = 1;
+    self.doubleTap = doubleTap;
     [self addGestureRecognizer:doubleTap];
 
     UITapGestureRecognizer *rightTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleRightTap)];
     rightTap.delaysTouchesEnded = NO;
     rightTap.numberOfTouchesRequired = 2;
     rightTap.numberOfTapsRequired = 1;
+    self.rightTap = rightTap;
     [self addGestureRecognizer:rightTap];
 
 }
@@ -54,27 +60,21 @@
 #if DEBUG_TRACK_MODE
     NSLog(@"Single tap!");
 #endif
-    if (!self.isMoved) {
-        [self.delegate handleSingleClickEvent];
-    }
+    [self.delegate handleSingleClickEvent];
 }
 
 - (void)handleDoubleTap:(UITapGestureRecognizer *)sender {
 #if DEBUG_TRACK_MODE
     NSLog(@"Double tap!");
 #endif
-    if (!self.isMoved) {
-        [self.delegate handleDoubleClickEvent];
-    }
+    [self.delegate handleDoubleClickEvent];
 }
 
 - (void)handleRightTap {
 #if DEBUG_TRACK_MODE
     NSLog(@"Right tap!");
 #endif
-    if (!self.isMoved) {
-        [self.delegate handleRightClickEvent];
-    }
+    [self.delegate handleRightClickEvent];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -94,7 +94,12 @@
     CGPoint prev = [touch previousLocationInView:self];
     CGPoint delta = CGPointMake(prev.x - cur.x, cur.y - prev.y);
 
-    self.moved = self.isMoved || !CGPointEqualToPoint(cur, prev);
+    BOOL isMoved = !CGPointEqualToPoint(cur, prev);
+    if (isMoved) {
+        [self.singleTap cancel];
+        [self.doubleTap cancel];
+        [self.rightTap cancel];
+    }
 
     [self.fsm accpetTouchCount:touches.count];
 
@@ -111,7 +116,6 @@
 }
 
 - (void)reset {
-    self.moved = NO;
     [self.fsm reset];
 }
 
