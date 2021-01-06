@@ -9,7 +9,7 @@
 #import "TrackPadView.h"
 #import "NSString+i18n.h"
 #import "TrackPadActionConsumer.h"
-#import "ConnectionManager.h"
+#import "ClientConnectionManager.h"
 
 @interface TrackPadViewController ()
 
@@ -37,7 +37,7 @@
 }
 
 - (void)updateConnectionState {
-    ConnectionState state = [ConnectionManager connectionState];
+    ConnectionState state = [ClientConnectionManager connectionState];
     switch (state) {
         case ConnectionStateConnected:
             self.title = @"Connected";

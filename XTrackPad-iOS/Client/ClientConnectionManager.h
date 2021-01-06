@@ -1,6 +1,6 @@
 //
-//  APIClientManager.h
-//  VTrackPad-iOS
+//  ClientConnectionManager.h
+//  XTrackPad-iOS
 //
 //  Created by xuzhaocheng on 2020/12/26.
 //
@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 extern NSNotificationName const XTPConnectionStatusDidChange;
 
-@interface ConnectionManager : NSObject
+@interface ClientConnectionManager : NSObject
 
 + (void)startup;
 + (void)sendEvent:(MouseEvent *)event;

@@ -28,7 +28,7 @@
 		6B363CDE25977C9800051EEA /* PTProtocol.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9625977A7300051EEA /* PTProtocol.m */; };
 		6B363CE125977C9B00051EEA /* PTChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C9825977A7300051EEA /* PTChannel.m */; };
 		6B363CF625977F0900051EEA /* MouseEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CF125977F0900051EEA /* MouseEvent.m */; };
-		6B363CFD25977F2A00051EEA /* ConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CFA25977F2A00051EEA /* ConnectionManager.m */; };
+		6B363CFD25977F2A00051EEA /* ClientConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363CFA25977F2A00051EEA /* ClientConnectionManager.m */; };
 		6B363D0225977F6B00051EEA /* TrackPadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D0125977F6B00051EEA /* TrackPadView.m */; };
 		6B363D0725977F8900051EEA /* PeerTalkClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D0525977F8900051EEA /* PeerTalkClient.m */; };
 		6B363D1E259869D800051EEA /* TrackModeFSM.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D1D259869D800051EEA /* TrackModeFSM.m */; };
@@ -84,8 +84,8 @@
 		6B363CF125977F0900051EEA /* MouseEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MouseEvent.m; sourceTree = "<group>"; };
 		6B363CF425977F0900051EEA /* MouseEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MouseEvent.h; sourceTree = "<group>"; };
 		6B363CF525977F0900051EEA /* EventTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventTypes.h; sourceTree = "<group>"; };
-		6B363CFA25977F2A00051EEA /* ConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConnectionManager.m; sourceTree = "<group>"; };
-		6B363CFB25977F2A00051EEA /* ConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConnectionManager.h; sourceTree = "<group>"; };
+		6B363CFA25977F2A00051EEA /* ClientConnectionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClientConnectionManager.m; sourceTree = "<group>"; };
+		6B363CFB25977F2A00051EEA /* ClientConnectionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientConnectionManager.h; sourceTree = "<group>"; };
 		6B363CFC25977F2A00051EEA /* ClientProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClientProtocol.h; sourceTree = "<group>"; };
 		6B363D0025977F6B00051EEA /* TrackPadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackPadView.h; sourceTree = "<group>"; };
 		6B363D0125977F6B00051EEA /* TrackPadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackPadView.m; sourceTree = "<group>"; };
@@ -238,8 +238,8 @@
 		6B363D0C25977FE500051EEA /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				6B363CFB25977F2A00051EEA /* ConnectionManager.h */,
-				6B363CFA25977F2A00051EEA /* ConnectionManager.m */,
+				6B363CFB25977F2A00051EEA /* ClientConnectionManager.h */,
+				6B363CFA25977F2A00051EEA /* ClientConnectionManager.m */,
 				6B363CFC25977F2A00051EEA /* ClientProtocol.h */,
 				6B363D0625977F8900051EEA /* PeerTalkClient.h */,
 				6B363D0525977F8900051EEA /* PeerTalkClient.m */,
@@ -465,7 +465,7 @@
 				6B363D6B2598D55300051EEA /* NSString+i18n.m in Sources */,
 				6B363CB825977ACA00051EEA /* SceneDelegate.m in Sources */,
 				6B363CDE25977C9800051EEA /* PTProtocol.m in Sources */,
-				6B363CFD25977F2A00051EEA /* ConnectionManager.m in Sources */,
+				6B363CFD25977F2A00051EEA /* ClientConnectionManager.m in Sources */,
 				6B363D0225977F6B00051EEA /* TrackPadView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,7 @@
 //
 
 #import "TrackPadView.h"
-#import "ConnectionManager.h"
+#import "ClientConnectionManager.h"
 #import "MouseEvent.h"
 #import "TrackModeFSM.h"
 
