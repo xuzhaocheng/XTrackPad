@@ -51,16 +51,27 @@
 }
 
 - (void)handleSingleTap:(UITapGestureRecognizer *)sender {
+#if DEBUG_TRACK_MODE
+    NSLog(@"Single tap!");
+#endif
     if (!self.isMoved) {
         [self.delegate handleSingleClickEvent];
     }
 }
 
 - (void)handleDoubleTap:(UITapGestureRecognizer *)sender {
-    [self.delegate handleDoubleClickEvent];
+#if DEBUG_TRACK_MODE
+    NSLog(@"Double tap!");
+#endif
+    if (!self.isMoved) {
+        [self.delegate handleDoubleClickEvent];
+    }
 }
 
 - (void)handleRightTap {
+#if DEBUG_TRACK_MODE
+    NSLog(@"Right tap!");
+#endif
     if (!self.isMoved) {
         [self.delegate handleRightClickEvent];
     }
