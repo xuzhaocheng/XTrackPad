@@ -26,7 +26,7 @@
 }
 
 - (double)cursorSpeed {
-    return [[Settings sharedInstance] cursorSpeed];
+    return [Settings cursorSpeed];
 }
 
 #pragma mark - TrackPadActionConsumerProtocol

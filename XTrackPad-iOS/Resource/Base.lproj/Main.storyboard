@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="10M-XW-9WF">
-                                <rect key="frame" x="10" y="66" width="394" height="44"/>
+                                <rect key="frame" x="10" y="66" width="394" height="98"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bJ4-f4-XEj">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
@@ -88,6 +88,31 @@
                                             <constraint firstItem="l7y-Iq-ayA" firstAttribute="leading" secondItem="ecI-vc-aHw" secondAttribute="trailing" constant="20" id="u9w-kL-zuZ"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXe-Of-CZB">
+                                        <rect key="frame" x="0.0" y="54" width="394" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Keep Awake" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vva-W9-9Q2">
+                                                <rect key="frame" x="8" y="12" width="92" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sNF-eN-m9q">
+                                                <rect key="frame" x="337" y="6.5" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="keepAwakeValueChanged:" destination="kzh-lM-cFf" eventType="valueChanged" id="qf2-Kx-h5a"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="44" id="JW2-2b-pZ4"/>
+                                            <constraint firstItem="Vva-W9-9Q2" firstAttribute="centerY" secondItem="wXe-Of-CZB" secondAttribute="centerY" id="KV5-HV-Mvn"/>
+                                            <constraint firstItem="Vva-W9-9Q2" firstAttribute="leading" secondItem="wXe-Of-CZB" secondAttribute="leading" constant="8" id="Tfv-dJ-Rvr"/>
+                                            <constraint firstAttribute="trailing" secondItem="sNF-eN-m9q" secondAttribute="trailing" constant="8" id="x1L-xX-qbp"/>
+                                            <constraint firstItem="sNF-eN-m9q" firstAttribute="centerY" secondItem="Vva-W9-9Q2" secondAttribute="centerY" id="zxE-Bd-HTS"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -102,6 +127,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="icD-yu-Giz"/>
                     <connections>
                         <outlet property="cursorSpeedSlider" destination="l7y-Iq-ayA" id="oT5-GQ-aeX"/>
+                        <outlet property="keepAwakeSwitch" destination="sNF-eN-m9q" id="Qxc-FQ-5Ff"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W6E-PX-2dy" sceneMemberID="firstResponder"/>

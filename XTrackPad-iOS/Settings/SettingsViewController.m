@@ -11,6 +11,7 @@
 @interface SettingsViewController ()
 
 @property (weak, nonatomic) IBOutlet UISlider *cursorSpeedSlider;
+@property (weak, nonatomic) IBOutlet UISwitch *keepAwakeSwitch;
 
 @end
 
@@ -20,11 +21,16 @@
     [super viewDidLoad];
     self.cursorSpeedSlider.minimumValue = [Settings minCursorSpeed];
     self.cursorSpeedSlider.maximumValue = [Settings maxCursorSpeed];
-    self.cursorSpeedSlider.value = [[Settings sharedInstance] cursorSpeed];
+    self.cursorSpeedSlider.value = [Settings cursorSpeed];
+
+    self.keepAwakeSwitch.on = [Settings keepAwake];
 }
 
 - (IBAction)cursorSpeedChanged:(UISlider *)sender {
-    [[Settings sharedInstance] setCursorSpeed:sender.value];
+    [Settings setCursorSpeed:sender.value];
+}
+- (IBAction)keepAwakeValueChanged:(UISwitch *)sender {
+    [Settings setKeepAwake:sender.isOn];
 }
 
 @end

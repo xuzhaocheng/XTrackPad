@@ -8,5 +8,7 @@
 	<real>0.5</real>
 	<key>CursorSpeed</key>
 	<real>1</real>
+	<key>KeepAwake</key>
+	<false/>
 </dict>
 </plist>
