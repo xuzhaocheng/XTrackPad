@@ -6,7 +6,7 @@
 //
 
 #import "TrackModeDrag.h"
-#import "ConnectionManager.h"
+#import "ClientConnectionManager.h"
 #import "MouseEvent.h"
 
 @implementation TrackModeDrag
@@ -21,7 +21,7 @@
 #endif
     MouseEvent *event = [[MouseEvent alloc] init];
     event.type = MouseEventTypeBeginDrag;
-    [ConnectionManager sendEvent:event];
+    [ClientConnectionManager sendEvent:event];
 }
 
 - (void)leave {
@@ -30,7 +30,7 @@
 #endif
     MouseEvent *event = [[MouseEvent alloc] init];
     event.type = MouseEventTypeEndDrag;
-    [ConnectionManager sendEvent:event];
+    [ClientConnectionManager sendEvent:event];
 }
 
 - (BOOL)couldTransformTo:(id<TrackMode>)mode {

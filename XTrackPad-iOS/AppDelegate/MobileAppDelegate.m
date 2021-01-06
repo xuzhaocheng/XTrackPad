@@ -6,7 +6,7 @@
 //
 
 #import "MobileAppDelegate.h"
-#import "ConnectionManager.h"
+#import "ClientConnectionManager.h"
 #import "Settings.h"
 
 @interface MobileAppDelegate ()
@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [ConnectionManager startup];
+    [ClientConnectionManager startup];
     [Settings registerDefaults];
     return YES;
 }

@@ -1,27 +1,27 @@
 //
 //  ConnectionManager.m
-//  VTrackPad-iOS
+//  XTrackPad-iOS
 //
 //  Created by xuzhaocheng on 2020/12/26.
 //
 
-#import "ConnectionManager.h"
+#import "ClientConnectionManager.h"
 #import "PeerTalkClient.h"
 #import <UIKit/UIKit.h>
 
 NSNotificationName const XTPConnectionStatusDidChange = @"XTPConnectionStatusDidChange";
 
-@interface ConnectionManager () <ConnectionStateListener>
+@interface ClientConnectionManager () <ConnectionStateListener>
 
 @end
 
-@implementation ConnectionManager
+@implementation ClientConnectionManager
 
 + (instancetype)sharedInstance {
     static dispatch_once_t onceToken;
-    static ConnectionManager * _instance = nil;
+    static ClientConnectionManager * _instance = nil;
     dispatch_once(&onceToken, ^{
-        _instance = [[ConnectionManager alloc] init];
+        _instance = [[ClientConnectionManager alloc] init];
     });
     return _instance;
 }
@@ -52,8 +52,8 @@ NSNotificationName const XTPConnectionStatusDidChange = @"XTPConnectionStatusDid
 }
 
 - (void)appWillResume:(NSNotification *)notification {
-    if ([ConnectionManager connectionState] != ConnectionStateConnected) {
-        [[ConnectionManager activeClient] connect];
+    if ([ClientConnectionManager connectionState] != ConnectionStateConnected) {
+        [[ClientConnectionManager activeClient] connect];
     }
 }
 
