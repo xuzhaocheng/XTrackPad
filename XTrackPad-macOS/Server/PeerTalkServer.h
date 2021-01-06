@@ -6,13 +6,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ServerProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PeerTalkServer : NSObject
+@interface PeerTalkServer : NSObject <ServerProtocol>
+
+@property (nonatomic, weak) id<ConnectionStateListener> delegate;
 
 + (instancetype)sharedInstance;
-- (void)startup;
 
 @end
 

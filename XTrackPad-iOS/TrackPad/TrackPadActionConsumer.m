@@ -54,7 +54,6 @@
 }
 
 - (void)handleSingleClickEvent {
-    NSLog(@"Tap !");
     self.mouseEvent.type = MouseEventTypeSingleClick;
     [ConnectionManager sendEvent:self.mouseEvent];
 }

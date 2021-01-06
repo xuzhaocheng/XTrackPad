@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6B363C80259776E800051EEA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C7F259776E800051EEA /* AppDelegate.m */; };
-		6B363C83259776E800051EEA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C82259776E800051EEA /* ViewController.m */; };
 		6B363C85259776E900051EEA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B363C84259776E900051EEA /* Assets.xcassets */; };
 		6B363C88259776E900051EEA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B363C86259776E900051EEA /* Main.storyboard */; };
 		6B363C8B259776E900051EEA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363C8A259776E900051EEA /* main.m */; };
@@ -42,14 +41,13 @@
 		6B363D732598D61600051EEA /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D722598D61600051EEA /* SettingsViewController.m */; };
 		6B363D83259A0AB100051EEA /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B363D82259A0AB100051EEA /* DefaultPreferences.plist */; };
 		6B363D93259A105300051EEA /* TrackPadActionConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D92259A105300051EEA /* TrackPadActionConsumer.m */; };
+		6B363DCC25A4B31800051EEA /* ServerConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363DCB25A4B31800051EEA /* ServerConnectionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B363C7B259776E800051EEA /* XTrackPad-macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "XTrackPad-macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B363C7E259776E800051EEA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6B363C7F259776E800051EEA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6B363C81259776E800051EEA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6B363C82259776E800051EEA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6B363C84259776E900051EEA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B363C87259776E900051EEA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B363C89259776E900051EEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -114,6 +112,9 @@
 		6B363D88259A0F4A00051EEA /* TrackPadActionConsumerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackPadActionConsumerProtocol.h; sourceTree = "<group>"; };
 		6B363D91259A105300051EEA /* TrackPadActionConsumer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrackPadActionConsumer.h; sourceTree = "<group>"; };
 		6B363D92259A105300051EEA /* TrackPadActionConsumer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrackPadActionConsumer.m; sourceTree = "<group>"; };
+		6B363DC125A4B1D700051EEA /* ServerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerProtocol.h; sourceTree = "<group>"; };
+		6B363DCA25A4B31800051EEA /* ServerConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerConnectionManager.h; sourceTree = "<group>"; };
+		6B363DCB25A4B31800051EEA /* ServerConnectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerConnectionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,10 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				6B363CA425977AA100051EEA /* Server */,
+				6B363DCA25A4B31800051EEA /* ServerConnectionManager.h */,
+				6B363DCB25A4B31800051EEA /* ServerConnectionManager.m */,
 				6B363C7E259776E800051EEA /* AppDelegate.h */,
 				6B363C7F259776E800051EEA /* AppDelegate.m */,
-				6B363C81259776E800051EEA /* ViewController.h */,
-				6B363C82259776E800051EEA /* ViewController.m */,
 				6B363CD325977B7300051EEA /* Mouse.h */,
 				6B363CD225977B7200051EEA /* Mouse.m */,
 				6B363C84259776E900051EEA /* Assets.xcassets */,
@@ -200,6 +201,7 @@
 		6B363CA425977AA100051EEA /* Server */ = {
 			isa = PBXGroup;
 			children = (
+				6B363DC125A4B1D700051EEA /* ServerProtocol.h */,
 				6B363CA625977AA100051EEA /* PeerTalkServer.h */,
 				6B363CA925977AA100051EEA /* PeerTalkServer.m */,
 				6B363CA725977AA100051EEA /* PeerTalkFrameProcessor.h */,
@@ -429,8 +431,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B363DCC25A4B31800051EEA /* ServerConnectionManager.m in Sources */,
 				6B363CD425977B7300051EEA /* Mouse.m in Sources */,
-				6B363C83259776E800051EEA /* ViewController.m in Sources */,
 				6B363CA225977A7300051EEA /* PTChannel.m in Sources */,
 				6B363CAB25977AA100051EEA /* PeerTalkServer.m in Sources */,
 				6B363C8B259776E900051EEA /* main.m in Sources */,

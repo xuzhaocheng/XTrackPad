@@ -25,7 +25,6 @@
 
 static const NSTimeInterval PTAppReconnectDelay = 3.0;
 
-
 @implementation PeerTalkServer
 
 + (instancetype)sharedInstance {
@@ -48,10 +47,51 @@ static const NSTimeInterval PTAppReconnectDelay = 3.0;
     return self;
 }
 
-- (void)startup {
+- (NSString *)identifier {
+    return @"USB Server";
+}
+
+- (NSString *)description {
+    ConnectionState state = [self connectionState];
+    NSString *stateStr = @"Not Connected";
+    switch (state) {
+        case ConnectionStateConnected:
+            stateStr = @"Connected";
+            break;
+        case ConnectionStateConnecting:
+            stateStr = @"Connecting";
+            break;;
+        default:
+            break;
+    }
+
+    return [NSString stringWithFormat:@"%@ - %@", @"USB", stateStr];
+}
+
+- (void)start {
     [self startListeningForDevices];
+    [self.delegate connectionStatusDidChange:self];
 //    [self enqueueConnectToLocalIPv4Port];
 }
+
+- (void)stop {
+    [self disconnectFromCurrentChannel];
+    [self.delegate connectionStatusDidChange:self];
+}
+
+- (ConnectionState)connectionState {
+
+    if (self.connectingToDeviceID && !self.connectedDeviceID) {
+        return ConnectionStateConnecting;
+    }
+
+    if (self.connectedDeviceID) {
+        return ConnectionStateConnected;
+    }
+
+    return ConnectionStateNotConnected;
+}
+
 
 - (void)tryToConnect {
     dispatch_async(self.notConnectedQueue, ^{
@@ -110,6 +150,7 @@ static const NSTimeInterval PTAppReconnectDelay = 3.0;
             if (!self.connectingToDeviceID || ![deviceID isEqualToNumber:self.connectingToDeviceID]) {
                 [self disconnectFromCurrentChannel];
                 self.connectingToDeviceID = deviceID;
+                [self.delegate connectionStatusDidChange:self];
                 self.connectedDeviceProperties = [note.userInfo objectForKey:PTUSBHubNotificationKeyProperties];
                 [self enqueueConnectToUSBDevice];
             }
@@ -128,6 +169,7 @@ static const NSTimeInterval PTAppReconnectDelay = 3.0;
                 [self.connectedChannel close];
             }
         }
+        [self.delegate connectionStatusDidChange:self];
     }];
 }
 
@@ -186,7 +228,6 @@ static const NSTimeInterval PTAppReconnectDelay = 3.0;
     });
 }
 
-
 - (void)connectToUSBDevice {
     PTChannel *channel = [PTChannel channelWithDelegate:self];
     channel.userInfo = self.connectingToDeviceID;
@@ -207,6 +248,7 @@ static const NSTimeInterval PTAppReconnectDelay = 3.0;
             self.connectedDeviceID = self.connectingToDeviceID;
             self.connectedChannel = channel;
         }
+        [self.delegate connectionStatusDidChange:self];
     }];
 }
 

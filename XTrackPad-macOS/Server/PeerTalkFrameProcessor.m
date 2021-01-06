@@ -11,6 +11,7 @@
 @implementation PeerTalkFrameProcessor
 
 + (void)handle:(PTEventFrame *)frame {
+    NSLog(@"handle %d", frame->type);
     dispatch_async(dispatch_get_main_queue(), ^{
         switch (frame->type) {
             case MouseEventTypeMove:
