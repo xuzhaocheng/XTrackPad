@@ -42,6 +42,7 @@
 		6B363D83259A0AB100051EEA /* DefaultPreferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6B363D82259A0AB100051EEA /* DefaultPreferences.plist */; };
 		6B363D93259A105300051EEA /* TrackPadActionConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363D92259A105300051EEA /* TrackPadActionConsumer.m */; };
 		6B363DCC25A4B31800051EEA /* ServerConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B363DCB25A4B31800051EEA /* ServerConnectionManager.m */; };
+		6B6FCB7425A6018000FC759A /* UITapGestureRecognizer+Cancel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6FCB7325A6018000FC759A /* UITapGestureRecognizer+Cancel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,8 @@
 		6B363DC125A4B1D700051EEA /* ServerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerProtocol.h; sourceTree = "<group>"; };
 		6B363DCA25A4B31800051EEA /* ServerConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerConnectionManager.h; sourceTree = "<group>"; };
 		6B363DCB25A4B31800051EEA /* ServerConnectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerConnectionManager.m; sourceTree = "<group>"; };
+		6B6FCB7225A6018000FC759A /* UITapGestureRecognizer+Cancel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITapGestureRecognizer+Cancel.h"; sourceTree = "<group>"; };
+		6B6FCB7325A6018000FC759A /* UITapGestureRecognizer+Cancel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITapGestureRecognizer+Cancel.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +299,8 @@
 				6B363D92259A105300051EEA /* TrackPadActionConsumer.m */,
 				6B363CB925977ACA00051EEA /* TrackPadViewController.h */,
 				6B363CBA25977ACA00051EEA /* TrackPadViewController.m */,
+				6B6FCB7225A6018000FC759A /* UITapGestureRecognizer+Cancel.h */,
+				6B6FCB7325A6018000FC759A /* UITapGestureRecognizer+Cancel.m */,
 			);
 			path = TrackPad;
 			sourceTree = "<group>";
@@ -464,6 +469,7 @@
 				6B363D2E2598A6B100051EEA /* TrackModeMove.m in Sources */,
 				6B363D6B2598D55300051EEA /* NSString+i18n.m in Sources */,
 				6B363CB825977ACA00051EEA /* SceneDelegate.m in Sources */,
+				6B6FCB7425A6018000FC759A /* UITapGestureRecognizer+Cancel.m in Sources */,
 				6B363CDE25977C9800051EEA /* PTProtocol.m in Sources */,
 				6B363CFD25977F2A00051EEA /* ClientConnectionManager.m in Sources */,
 				6B363D0225977F6B00051EEA /* TrackPadView.m in Sources */,
